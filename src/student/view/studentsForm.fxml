@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="489.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.controller.FormController">
+    <children>
+        <Label alignment="TOP_CENTER" layoutX="25.0" layoutY="21.0" text="Student's FORM" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tv_students" editable="true" layoutX="316.0" layoutY="90.0" onMouseClicked="#handMouseAction" prefHeight="476.0" prefWidth="561.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="140.0">
+            <columns>
+                <TableColumn fx:id="col_id" editable="false" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" text="ID" />
+                <TableColumn fx:id="col_fullName" editable="false" prefWidth="200.0" text="FullName" />
+                <TableColumn fx:id="col_address" editable="false" prefWidth="200.0" text="Address" />
+            </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+        </TableView>
+      <TextField fx:id="tf_search" layoutX="320.0" layoutY="76.0" onKeyReleased="#handleOnKeyReleased" prefHeight="26.0" prefWidth="557.0" promptText="Search" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0" />
+      <VBox layoutX="20.0" layoutY="131.0" prefHeight="123.0" prefWidth="76.0" spacing="25.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0">
+         <children>
+            <Label text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="FullName">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Address">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="117.0" layoutY="131.0" prefHeight="123.0" prefWidth="166.0" spacing="15.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="140.0">
+         <children>
+            <TextField fx:id="tf_id" editable="false" />
+            <TextField fx:id="tf_fullName" />
+            <TextField fx:id="tf_adress" />
+         </children>
+      </VBox>
+      <HBox layoutX="20.0" layoutY="285.0" prefHeight="43.0" prefWidth="261.0" spacing="30.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="280.0">
+         <children>
+            <Button fx:id="btn_delete" mnemonicParsing="false" onAction="#handleButtonAction" text="Delete">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_update" mnemonicParsing="false" onAction="#handleButtonAction" text="Update">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btn_create" mnemonicParsing="false" onAction="#handleButtonAction" text="Create">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>
